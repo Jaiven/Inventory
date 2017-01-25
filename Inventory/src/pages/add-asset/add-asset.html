@@ -1,0 +1,46 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Add Asset
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="addAssetForm" class="form" (ngSubmit)="onSubmit(addAssetForm.value)" >
+
+    <ion-item>
+      <ion-label floating color="primary" >Asset Model</ion-label>
+      <ion-input type="text" formControlName="model"></ion-input>
+    </ion-item> 
+    
+    <ion-item>
+      <ion-label floating color="primary" >Manufacturer</ion-label>
+      <ion-input type="text" formControlName="manufacturer"></ion-input>
+    </ion-item> 
+    
+    <ion-item>
+      <ion-label floating color="primary" >Serial Number</ion-label>
+      <ion-input type="text" formControlName="serialNumber"></ion-input>
+    </ion-item> 
+
+    <ion-item>
+      <ion-label floating color="primary" >Asset Tag</ion-label>
+      <ion-input type="text" formControlName="assetTag"></ion-input>
+    </ion-item> 
+
+    <ion-item>
+      <ion-label floating color="primary" >Type</ion-label>
+      <ion-input type="text" formControlName="type"></ion-input>
+    </ion-item> 
+
+    <ion-item>
+      <ion-label floating color="primary" >Status</ion-label>
+      <ion-input type="text" formControlName="model"></ion-input>
+    </ion-item> 
+
+    <button ion-button full type="submit">Submit</button>
+
+  </form>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Asset List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Asset List</h3>
+</ion-content>
+
+<ion-footer>
+  <button ion-button icon-left [navPush]="pushAddAsset">
+      <ion-icon md="md-add-circle">
+        Add Asset
+      </ion-icon>  
+  </button>
+  <button ion-button icon-right [navPush]="pushScan"> 
+      <ion-icon md="md-barcode">
+        Scan Barcode
+      </ion-icon>
+  </button>
+</ion-footer>
+

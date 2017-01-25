@@ -1,0 +1,7 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE Assets (id integer primary key, Model varchar(30), Manufacturer varchar(30), serialNumber varchar(30), assetTag NUMERIC, Type varchar(30), Status varchar(30), Category varchar(30));
+
+COMMIT;
+
+
