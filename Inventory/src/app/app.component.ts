@@ -39,7 +39,7 @@ export class MyApp {
                 name: "data.db",
                 location: "default"
             }).then(() => {
-                db.executeSql("CREATE TABLE Assets (id integer primary key, Model varchar(30), Manufacturer varchar(30), serialNumber varchar(30), assetTag NUMERIC, Type varchar(30), Status varchar(30), Category varchar(30))", {}).then((data) => {
+                db.executeSql("CREATE TABLE IF NOT EXISTS Assets (id integer primary key, Model text(30), Manufacturer text(30)", {}).then((data) => {
                   
                     console.log("TABLE CREATED: ", data);
                 }, (error) => {
@@ -48,6 +48,7 @@ export class MyApp {
             }, (error) => {
                 console.error("Unable to open database", error);
             });
+            console.log("database created");
 //
 
 
